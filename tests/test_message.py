@@ -7,6 +7,13 @@ def message():
     return Messsage()
 
 
+@pytest.fixture()
+def message2():
+    m = Messsage()
+    m.text('a').text('b')
+    return m
+
+
 def test_message_default_length(message):
     assert len(message.get_message()) == 0
 

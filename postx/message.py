@@ -26,5 +26,9 @@ class Messsage(object):
         self._elementTotal += 1
         return self
 
+    def remove_part(self, idx):
+        self.message.pop(str(idx))
+        return self
+
     def get_message(self):
         return self.message
